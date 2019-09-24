@@ -53,7 +53,6 @@ func main() {
 func msg2morse(s string) string {
 	var mouseContent string
 	split := strings.Split(s, " ")
-	// 将字符串使用空格分割，每个空格都要替换成莫斯电码里面的7个时间单位
 	for index, value := range split {
 		src := []rune(value)
 		var mouseWorld string
@@ -63,7 +62,6 @@ func msg2morse(s string) string {
 				continue
 			}
 			word = morseMap[word]
-			// 字符之间分割使用3个时间单位
 			if i == 0 {
 				mouseWorld = word
 			} else {
